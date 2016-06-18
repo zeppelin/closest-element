@@ -1,0 +1,51 @@
+{
+  "name": "closest-element",
+  "version": "0.0.0",
+  "description": "Find the closest element that matches a selector or an element",
+  "main": "dist/closest.cjs.js",
+  "jsnext:main": "dist/closest.es6.js",
+  "scripts": {
+    "clean": "rm -fr dist",
+    "build": "./node_modules/.bin/rollup -c rollup.config.js",
+    "prepublish": "npm run clean && npm run build",
+    "test": "npm run clean && npm run build && ./node_modules/.bin/run-browser test/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chrisyip/closest-element.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisyip/closest-element/issues"
+  },
+  "homepage": "https://github.com/chrisyip/closest-element",
+  "devDependencies": {
+    "domify": "^1.4.0",
+    "matches-selector": "^1.0.0",
+    "rollup-plugin-buble": "^0.11.0",
+    "rollup-plugin-commonjs": "^3.0.0",
+    "rollup-plugin-node-resolve": "^1.7.0",
+    "run-browser": "^2.0.2",
+    "tape": "^4.5.1"
+  },
+  "testling": {
+    "files": "test/tests.js",
+    "browsers": [
+      "ie/8.0",
+      "ie/9.0",
+      "ie/10.0",
+      "chrome/30.0",
+      "chrome/canary",
+      "ff/20.0",
+      "ff/nightly",
+      "opera/11.0",
+      "opera/next",
+      "safari/5.0.5",
+      "safari/5.1",
+      "safari/6.0",
+      "iphone/6.0",
+      "ipad/6.0",
+      "android-browser/4.2"
+    ]
+  }
+}
