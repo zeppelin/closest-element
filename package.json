@@ -1,6 +1,6 @@
 {
   "name": "closest-element",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Find the closest element that matches a selector or an element",
   "main": "dist/closest.cjs.js",
   "jsnext:main": "dist/closest.es6.js",
